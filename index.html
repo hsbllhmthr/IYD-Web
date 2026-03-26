@@ -127,6 +127,51 @@
 
     </div>
   </section>
+
+  <!-- ====== WHO WE ARE SECTION ====== -->
+  <section class="wwa-section">
+
+    <!-- Background image -->
+    <img src="/img/bg-hero2.png" alt="Who We Are Background" class="wwa-bg" />
+
+    <!-- Gradient overlay kiri -->
+    <div class="wwa-overlay"></div>
+
+    <!-- Konten -->
+    <div class="wwa-inner">
+      <div class="wwa-content">
+        <h2 class="wwa-title">Who we are</h2>
+      <p class="wwa-desc">
+        Indonesian Youth Diplomacy (IYD) is a non-profit youth
+        organization aiming to promote international exposure and drive
+        inclusive empowerment for Indonesian youths to be influential
+        voices at the national and international levels.
+      </p>
+      <div class="wwa-buttons">
+        <a href="#" class="wwa-btn">
+          About IYD
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </a>
+        <a href="#" class="wwa-btn">
+          IYD Board
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </a>
+        <a href="#" class="wwa-btn">
+          Programs
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </a>
+      </div>
+      </div>
+    </div>
+
+  </section>
+
   <script>
     const navbar       = document.querySelector('.navbar');
     const hamburgerBtn = document.getElementById('hamburgerBtn');
@@ -134,28 +179,24 @@
     const heroBg       = document.querySelector('.hero-bg');
     const heroWrapper  = document.querySelector('.hero-wrapper');
 
-    /* ---- Scroll: transparan ↔ putih + show/hide navbar + hide hero bg ---- */
     let lastScrollY = 0;
 
     function handleScroll() {
       const currentScrollY = window.scrollY;
       const heroHeight = heroWrapper.offsetHeight;
 
-      // Sembunyikan bg saat sudah keluar dari area hero
       if (currentScrollY >= heroHeight) {
         heroBg.classList.add('out-of-view');
       } else {
         heroBg.classList.remove('out-of-view');
       }
 
-      // Transparan / putih
       if (currentScrollY > 10) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
       }
 
-      // Sembunyikan saat scroll ke bawah, tampilkan saat scroll ke atas
       if (currentScrollY > lastScrollY && currentScrollY > 80) {
         navbar.classList.add('hidden');
       } else {
@@ -167,7 +208,6 @@
     window.addEventListener('scroll', handleScroll);
     handleScroll();
 
-    /* ---- Hamburger toggle ---- */
     hamburgerBtn.addEventListener('click', () => {
       const isOpen = mobileMenu.classList.toggle('open');
       hamburgerBtn.classList.toggle('active', isOpen);
