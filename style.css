@@ -63,7 +63,6 @@ a {
   overflow: visible;
   z-index: 1;
   background: transparent;
-  margin-bottom: 30px;
 }
 
 
@@ -572,7 +571,7 @@ body.menu-open {
 
 /* ---- Gambar ---- */
 .about-image-wrap {
-  flex: 0 0 444px;
+  flex: 0 0 360px;
   width: 444px;
 }
 
@@ -606,6 +605,7 @@ body.menu-open {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   line-height: 28px;
+  margin-bottom: 20px;
 }
 
 /* ---- Tombol ---- */
@@ -647,7 +647,7 @@ body.menu-open {
   .about-inner {
     flex-direction: column;
     padding: 56px 24px;
-    gap: 36px;
+    gap: 20px;
   }
 
   .about-image-wrap {
@@ -661,7 +661,7 @@ body.menu-open {
   }
 
   .about-title {
-    font-size: clamp(20px, 5vw, 26px);
+    font-size: 30px;
   }
 
   .about-desc {
@@ -671,17 +671,18 @@ body.menu-open {
 
 @media (max-width: 480px) {
   .about-inner {
-    padding: 44px 16px;
-    gap: 28px;
+    padding: 44px 25px;
+    gap: 16px;
   }
 
   .about-title {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .about-desc {
     font-size: 14px;
     line-height: 26px;
+    margin-bottom: 20px;
   }
 
   .about-btn {
@@ -841,7 +842,7 @@ body.menu-open {
   }
 
   .wwa-title {
-    font-size: clamp(20px, 5vw, 26px);
+    font-size: 30px;
   }
 
   .wwa-desc {
@@ -865,12 +866,165 @@ body.menu-open {
   }
 
   .wwa-content {
-    padding: 0 16px;
+    padding: 0 25px;
   }
 
   .wwa-buttons {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+  }
+}
+
+
+/* ==============================================
+   ABOUT DATA SECTION
+   ============================================== */
+.adata-section {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  z-index: 2;
+}
+
+.adata-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 100px 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ---- Baris atas ---- */
+.adata-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+  margin-bottom: 80px;
+}
+
+.adata-headline {
+  flex: 0 0 auto;
+  width: 490px;
+  color: #1E1E1E;
+  font-size: 30px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  line-height: 1.45;
+  white-space: normal;
+}
+
+.adata-paragraph {
+  flex: 1;
+  color: #1E1E1E;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+  padding-top: 6px;
+}
+
+/* ---- Divider ---- */
+.adata-divider {
+  width: 100%;
+  height: 1px;
+  background: #D9D9D9;
+  margin-bottom: 36px;
+}
+
+/* ---- Statistik ---- */
+.adata-stats {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.adata-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 40px;
+}
+
+.adata-stat-label {
+  color: #BE5D2A;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+}
+
+.adata-stat-number {
+  color: #1E1E1E;
+  font-size: 60px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.adata-stat-desc {
+  color: #1E1E1E;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+
+/* ---- Responsive About Data ---- */
+@media (max-width: 768px) {
+  .adata-inner {
+    padding: 60px 24px;
+  }
+
+  .adata-top {
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .adata-headline {
+    width: 100%;
+    font-size: 26px;
+  }
+
+  .adata-paragraph {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .adata-stats {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .adata-stat {
+    padding-right: 0;
+  }
+
+  .adata-stat-number {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .adata-inner {
+    padding: 48px 25px;
+  }
+
+  .adata-headline {
+    font-size: 30px;
+  }
+
+  .adata-stat-number {
+    font-size: 60px;
+  }
+
+  .adata-stat-desc {
+    font-size: 14px;
   }
 }
