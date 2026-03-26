@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IYD LC Sulawesi Selatan</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Birthstone+Bounce&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Background penuh viewport (di luar page-center) -->
+  <img class="hero-bg" src="/img/bg-hero.png" alt="Hero Background" />
+
+  <div class="page-center">
+  <div class="hero-wrapper">
+
+    <!-- ====== NAVBAR ====== -->
+    <header class="navbar">
+      <div class="navbar-inner">
+        <!-- Logo transparan (default) -->
+        <img class="navbar-logo logo-light" src="/img/logo.png" alt="IYD Logo Light" />
+        <!-- Logo saat scrolled / background putih -->
+        <img class="navbar-logo logo-dark" src="/img/logo-red.png" alt="IYD Logo Dark" />
+
+        <!-- Desktop Menu -->
+        <nav class="navbar-menu">
+          <a href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#">Programs</a>
+          <a href="#">Insights</a>
+          <a href="#">Get Involved</a>
+          <a href="#">Contact</a>
+        </nav>
+
+        <!-- Hamburger Button (mobile) -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+      <nav class="mobile-menu-nav">
+        <a href="#" onclick="closeMobileMenu()">Home</a>
+        <a href="#" onclick="closeMobileMenu()">About Us</a>
+        <a href="#" onclick="closeMobileMenu()">Programs</a>
+        <a href="#" onclick="closeMobileMenu()">Insights</a>
+        <a href="#" onclick="closeMobileMenu()">Get Involved</a>
+        <a href="#" onclick="closeMobileMenu()">Contact</a>
+      </nav>
+    </div>
+
+    <!-- ====== HERO TEXT ====== -->
+    <div class="hero-content">
+
+      <!-- Badge -->
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span class="hero-badge-label">IYD LC SULAWESI SELATAN</span>
+      </div>
+
+      <!-- Headline Desktop -->
+      <h1 class="hero-headline headline-desktop">
+        <span class="hero-headline-initial">E</span>mpowering Indonesian<br />
+        <strong>Youth in Global Diplomacy</strong>
+      </h1>
+
+      <!-- Headline Mobile -->
+      <h1 class="hero-headline headline-mobile">
+        <span class="hero-headline-initial">E</span>mpowering<br />
+        Indonesian Youth in<br />
+        <strong>Global Diplomacy</strong>
+      </h1>
+
+    </div>
+
+    <!-- ====== BOTTOM BAR ====== -->
+    <div class="hero-bottom-bar">
+      <div class="bottom-bar-row">
+        <a href="#">BRICS Youth Summit 2025</a>
+        <a href="#">Y20 Summit</a>
+      </div>
+      <div class="bottom-bar-row">
+        <a href="#">Asean Youth Agenda</a>
+        <a href="#">IYD Board</a>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- ====== ABOUT SECTION ====== -->
+  <section class="about-section">
+    <div class="about-inner">
+
+      <!-- Gambar kiri -->
+      <div class="about-image-wrap">
+        <img src="/img/abt-img.svg" alt="IYD About" class="about-image" />
+      </div>
+
+      <!-- Konten kanan -->
+      <div class="about-content">
+        <h2 class="about-title">Indonesian Youth Diplomacy</h2>
+        <p class="about-desc">
+          Indonesian Youth Diplomacy (IYD) is an Indonesia-based non-profit and
+          non-political youth organization that seeks to promote international exposure
+          for Indonesian youths through inclusive empowerment. Established in 2013,
+          IYD was originally a platform that connected alumni of Y20 delegates from
+          Indonesia.
+          <br><br>
+          IYD alumni give back to the country through various work that they do as 
+          government officials, diplomats, international public servants, members of 
+          parliament, start-up founders, investors at venture capital firms, management 
+          consultants, researchers, and academics.
+        </p>
+        <a href="#" class="about-btn">
+          More Information
+          <svg class="about-btn-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#BE5D2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+  <script>
+    const navbar       = document.querySelector('.navbar');
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu   = document.getElementById('mobileMenu');
+    const heroBg       = document.querySelector('.hero-bg');
+    const heroWrapper  = document.querySelector('.hero-wrapper');
+
+    /* ---- Scroll: transparan ↔ putih + show/hide navbar + hide hero bg ---- */
+    let lastScrollY = 0;
+
+    function handleScroll() {
+      const currentScrollY = window.scrollY;
+      const heroHeight = heroWrapper.offsetHeight;
+
+      // Sembunyikan bg saat sudah keluar dari area hero
+      if (currentScrollY >= heroHeight) {
+        heroBg.classList.add('out-of-view');
+      } else {
+        heroBg.classList.remove('out-of-view');
+      }
+
+      // Transparan / putih
+      if (currentScrollY > 10) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+
+      // Sembunyikan saat scroll ke bawah, tampilkan saat scroll ke atas
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        navbar.classList.add('hidden');
+      } else {
+        navbar.classList.remove('hidden');
+      }
+
+      lastScrollY = currentScrollY;
+    }
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    /* ---- Hamburger toggle ---- */
+    hamburgerBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburgerBtn.classList.toggle('active', isOpen);
+      document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      hamburgerBtn.classList.remove('active');
+      document.body.classList.remove('menu-open');
+    }
+  </script>
+
+</body>
+</html>
