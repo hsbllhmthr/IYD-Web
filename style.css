@@ -1330,3 +1330,173 @@ body.menu-open {
     font-size: 14px;
   }
 }
+
+
+/* ==============================================
+   GALLERY SECTION
+   ============================================== */
+.gallery-section {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  z-index: 2;
+}
+
+.gallery-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 89px 160px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ---- Header ---- */
+.gallery-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.gallery-title {
+  color: #1E1E1E;
+  font-size: 30px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* Nav buttons */
+.gallery-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gallery-nav-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 2px solid #F1F5F9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.gallery-nav-btn:hover {
+  border-color: #BE5D2A;
+  background: #FFF5F0;
+}
+
+/* ---- Grid Layout ---- */
+.gallery-grid {
+  display: flex;
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* Gambar besar kiri */
+.gallery-main {
+  flex: 0 0 468px;
+  width: 468px;
+}
+
+.gallery-main .gallery-img {
+  width: 100%;
+  height: 588px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* 2x2 grid kanan */
+.gallery-sub {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.gallery-sub .gallery-img {
+  width: 100%;
+  height: 288px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Hover effect */
+.gallery-img {
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.02);
+  opacity: 0.92;
+}
+
+
+/* ---- Responsive Gallery ---- */
+@media (max-width: 768px) {
+  .gallery-inner {
+    padding: 60px 24px 72px;
+  }
+
+  .gallery-header {
+    margin-bottom: 32px;
+  }
+
+  .gallery-title {
+    font-size: 24px;
+  }
+
+  .gallery-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .gallery-main {
+    flex: none;
+    width: 100%;
+  }
+
+  .gallery-main .gallery-img {
+    height: 320px;
+  }
+
+  .gallery-sub .gallery-img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-inner {
+    padding: 48px 25px 60px;
+  }
+
+  .gallery-title {
+    font-size: 22px;
+  }
+
+  .gallery-nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .gallery-main .gallery-img {
+    height: 260px;
+  }
+
+  .gallery-sub {
+    gap: 10px;
+  }
+
+  .gallery-sub .gallery-img {
+    height: 130px;
+  }
+}
