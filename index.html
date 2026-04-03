@@ -25,8 +25,8 @@
 
         <!-- Desktop Menu -->
         <nav class="navbar-menu">
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
           <a href="#">Programs</a>
           <a href="#">Insights</a>
           <a href="#">Get Involved</a>
@@ -45,8 +45,8 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu" id="mobileMenu">
       <nav class="mobile-menu-nav">
-        <a href="#" onclick="closeMobileMenu()">Home</a>
-        <a href="#" onclick="closeMobileMenu()">About Us</a>
+        <a href="index.html" onclick="closeMobileMenu()">Home</a>
+        <a href="about.html" onclick="closeMobileMenu()">About Us</a>
         <a href="#" onclick="closeMobileMenu()">Programs</a>
         <a href="#" onclick="closeMobileMenu()">Insights</a>
         <a href="#" onclick="closeMobileMenu()">Get Involved</a>
@@ -334,7 +334,7 @@
 
       <!-- Header -->
       <div class="gallery-header">
-        <h2 class="gallery-title" data-anim>IYD Sulawesi Selatan Gallery</h2>
+        <h2 class="gallery-title" data-anim>IYD Sulsel Gallery</h2>
         <div class="gallery-nav">
           <button class="gallery-nav-btn" id="galleryPrev" aria-label="Previous">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#BE5D2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 18l-6-6 6-6"/></svg>
@@ -445,10 +445,10 @@
             <img src="/img/x.png" alt="Social 1" />
           </a>
           <a href="#" class="footer-social-link" aria-label="Social 2">
-            <img src="/img/ig.png" alt="Social 2" />
+            <img src="/img/tiktok.png" alt="Social 2" />
           </a>
           <a href="#" class="footer-social-link" aria-label="Social 3">
-            <img src="/img/tiktok.png" alt="Social 3" />
+            <img src="/img/ig.png" alt="Social 3" />
           </a>
           <a href="#" class="footer-social-link" aria-label="Social 4">
             <img src="/img/ytb.png" alt="Social 4" />
@@ -458,6 +458,13 @@
 
     </div>
   </footer>
+
+  <!-- ====== BACK TO TOP BUTTON ====== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
 
   <script>
     const navbar       = document.querySelector('.navbar');
@@ -484,9 +491,10 @@
         navbar.classList.remove('scrolled');
       }
 
-      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+      // Sembunyikan saat scroll ke bawah, tampilkan saat scroll ke atas
+      if (currentScrollY > lastScrollY + 5 && currentScrollY > 80) {
         navbar.classList.add('hidden');
-      } else {
+      } else if (currentScrollY < lastScrollY - 5) {
         navbar.classList.remove('hidden');
       }
 
@@ -567,6 +575,21 @@
 
     document.querySelectorAll('[data-count]').forEach(el => {
       countObserver.observe(el);
+    });
+
+    /* ---- Back to Top ---- */
+    const backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 

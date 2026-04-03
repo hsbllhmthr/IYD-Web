@@ -11,6 +11,10 @@
   padding: 0;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background: #ffffff;
@@ -74,7 +78,7 @@ a {
   width: 100%;
   height: 70px;
   background: transparent;
-  z-index: 100;
+  z-index: 9998;
   transition: background 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
   border-bottom: 1.5px solid transparent;
 }
@@ -570,7 +574,6 @@ body.menu-open {
   position: relative;
   width: 100%;
   background: #ffffff;
-  z-index: 2;
 }
 
 /* Tutup sisa kecil hero-bg di atas about section */
@@ -580,6 +583,7 @@ body.menu-open {
   top: -60px;
   left: 0;
   width: 100%;
+  height: 60px;
   background: #ffffff;
   z-index: -1;
 }
@@ -724,7 +728,6 @@ body.menu-open {
   width: 100%;
   height: 500px;
   overflow: hidden;
-  z-index: 2;
 }
 
 /* Background image */
@@ -744,7 +747,6 @@ body.menu-open {
   inset: 0;
   width: 56%;                   /* ~805/1440 */
   background: linear-gradient(90deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0) 100%);
-  z-index: 1;
 }
 
 /* Centering wrapper — sama seperti navbar-inner */
@@ -753,7 +755,6 @@ body.menu-open {
   inset: 0;
   display: flex;
   align-items: center;
-  z-index: 2;
   width: 100%;
 }
 
@@ -780,7 +781,6 @@ body.menu-open {
   padding: 0 160px;
   display: flex;
   flex-direction: column;
-  z-index: 2;
 }
 
 .wwa-content > * {
@@ -908,7 +908,6 @@ body.menu-open {
   position: relative;
   width: 100%;
   background: #ffffff;
-  z-index: 2;
 }
 
 .adata-inner {
@@ -1061,7 +1060,6 @@ body.menu-open {
   position: relative;
   width: 100%;
   display: flex;
-  z-index: 2;
 }
 
 /* ---- Kartu individual ---- */
@@ -1091,7 +1089,6 @@ body.menu-open {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.75) 100%);
-  z-index: 1;
 }
 
 /* Teks di bawah kartu */
@@ -1100,7 +1097,6 @@ body.menu-open {
   bottom: 40px;
   left: 44px;
   right: 16px;
-  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -1173,7 +1169,6 @@ body.menu-open {
   position: relative;
   width: 100%;
   background: #ffffff;
-  z-index: 2;
 }
 
 .news-inner {
@@ -1363,7 +1358,6 @@ body.menu-open {
   position: relative;
   width: 100%;
   background: #ffffff;
-  z-index: 2;
 }
 
 .gallery-inner {
@@ -1533,7 +1527,6 @@ body.menu-open {
   position: relative;
   width: 100%;
   background: #BE5D2A;
-  z-index: 2;
 }
 
 .cta-inner {
@@ -1631,8 +1624,7 @@ body.menu-open {
 .footer {
   position: relative;
   width: 100%;
-  background: #ffffff;
-  z-index: 2;
+  background: #F5F5F5;
 }
 
 .footer-inner {
@@ -1706,7 +1698,10 @@ body.menu-open {
 
 /* ---- Divider ---- */
 .footer-divider {
-  width: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
   height: 1px;
   background: #D9D9D9;
   margin-bottom: 28px;
@@ -1785,5 +1780,50 @@ body.menu-open {
 
   .footer-copy {
     font-size: 11px;
+  }
+}
+
+
+/* ==============================================
+   BACK TO TOP BUTTON
+   ============================================== */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #BE5D2A;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
+  box-shadow: 0 4px 16px rgba(190, 93, 42, 0.35);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.back-to-top:hover {
+  background: #673016;
+}
+
+@media (max-width: 480px) {
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
   }
 }

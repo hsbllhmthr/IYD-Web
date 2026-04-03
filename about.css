@@ -1,0 +1,637 @@
+/* ==============================================
+   About Us Page — Specific Styles
+   ============================================== */
+
+/* ---- About Hero Banner ---- */
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.about-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Gradient overlay gelap agar teks terbaca */
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+/* Centering wrapper */
+.about-hero-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.about-hero-content {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 160px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Breadcrumb */
+.about-hero-breadcrumb {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+
+/* Judul */
+.about-hero-title {
+  color: #ffffff;
+  font-size: 38px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.about-hero-initial {
+  font-family: 'Birthstone Bounce', cursive;
+  font-size: 38px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+/* Deskripsi */
+.about-hero-desc {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+/* ---- Navbar active state ---- */
+.navbar-menu .nav-active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+.navbar.scrolled .navbar-menu .nav-active {
+  color: #BE5D2A;
+}
+
+
+/* ---- Responsive About Hero ---- */
+@media (max-width: 768px) {
+  .about-hero {
+    height: 420px;
+  }
+
+  .about-hero-content {
+    padding: 0 24px 48px;
+  }
+
+  .about-hero-title {
+    font-size: 30px;
+  }
+
+  .about-hero-initial {
+    font-size: 30px;
+  }
+
+  .about-hero-desc {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    height: 380px;
+  }
+
+  .about-hero-content {
+    padding: 0 20px 40px;
+  }
+
+  .about-hero-title {
+    font-size: 26px;
+  }
+
+  .about-hero-initial {
+    font-size: 26px;
+  }
+
+  .about-hero-desc {
+    font-size: 13px;
+  }
+}
+
+
+/* ---- About Tab Menu ---- */
+.about-tabs {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.about-tab {
+  flex: 1;
+  min-height: 100px;
+  padding: 28px 32px;
+  background: #ffffff;
+  border: none;
+  border-right: 1px solid #D9D9D9;
+  color: #747474;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.about-tab:last-child {
+  border-right: none;
+}
+
+.about-tab:hover {
+  color: #1E1E1E;
+  background: #f5f5f5;
+}
+
+.about-tab.active {
+  color: #1E1E1E;
+  background: #f5f5f5;
+}
+
+
+/* ---- Responsive Tab ---- */
+@media (max-width: 768px) {
+  .about-tab {
+    min-height: 80px;
+    padding: 20px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-tabs {
+    flex-direction: column;
+  }
+
+  .about-tab {
+    min-height: 64px;
+    padding: 18px 20px;
+    border-right: none;
+    border-bottom: 1px solid #D9D9D9;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .about-tab.active {
+    border-bottom: 1px solid #BE5D2A;
+  }
+}
+
+
+/* ---- About Detail Section ---- */
+.adetail-section {
+  width: 100%;
+  background: #ffffff;
+}
+
+.adetail-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 70px 256px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.adetail-title {
+  color: #1E1E1E;
+  font-size: 30px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+  max-width: 447px;
+}
+
+.adetail-desc {
+  color: #1E1E1E;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  max-width: 928px;
+}
+
+.adetail-img-wrap {
+  max-width: 928px;
+}
+
+.adetail-img {
+  width: 100%;
+  height: 410px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+
+/* ---- Responsive Detail ---- */
+@media (max-width: 768px) {
+  .adetail-inner {
+    padding: 48px 24px 72px;
+    gap: 20px;
+  }
+
+  .adetail-title {
+    font-size: 24px;
+    max-width: 100%;
+  }
+
+  .adetail-desc {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .adetail-img-wrap {
+    max-width: 100%;
+  }
+
+  .adetail-img {
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .adetail-inner {
+    padding: 36px 20px 56px;
+    gap: 16px;
+  }
+
+  .adetail-title {
+    font-size: 22px;
+  }
+
+  .adetail-desc {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .adetail-img {
+    height: 200px;
+  }
+}
+
+
+/* ---- Divider antara about detail dan history ---- */
+.adetail-section {
+  border-bottom: 1px solid #D9D9D9;
+}
+
+/* ==============================================
+   IYD HISTORY SECTION
+   ============================================== */
+.history-section {
+  width: 100%;
+  background: #ffffff;
+}
+
+.history-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 256px;
+}
+
+/* ---- Judul ---- */
+.history-title {
+  color: #1E1E1E;
+  font-size: 30px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+  padding-top: 70px;
+  padding-bottom: 32px;
+}
+
+/* ---- Full-width Banner ---- */
+.history-banner {
+  position: relative;
+  width: 100%;
+  height: 410px;
+  margin-top: 32px;
+  overflow: hidden;
+}
+
+.history-banner-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.history-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Wrapper centering di dalam banner */
+.history-banner-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 2;
+  width: 100%;
+}
+
+.history-banner-inner-wrap {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 256px;
+}
+
+/* Timeline nav di dalam banner — atas */
+.history-timeline {
+  display: flex;
+  gap: 0;
+  padding-top: 30px;
+}
+
+.history-timeline-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.history-timeline-label {
+  color: #B8B8B8;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.history-timeline-bar {
+  width: 203px;
+  height: 2px;
+  background: #B8B8B8;
+  transition: background 0.2s ease;
+}
+
+.history-timeline-item.active .history-timeline-label {
+  color: #ffffff;
+}
+
+.history-timeline-item.active .history-timeline-bar {
+  background: #ffffff;
+}
+
+.history-timeline-item:hover .history-timeline-label {
+  color: #ffffff;
+}
+
+/* Konten tahun + deskripsi */
+.history-banner-content {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.history-banner-year {
+  color: #ffffff;
+  font-size: 36px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.history-banner-desc {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  max-width: 928px;
+}
+
+/* ---- Body text ---- */
+.history-body {
+  color: #1E1E1E;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  max-width: 928px;
+  padding-top: 48px;
+}
+
+/* ---- Social link ---- */
+.history-social {
+  color: #1E1E1E;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+  max-width: 928px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+.history-social a {
+  color: #1E1E1E;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.history-social a:hover {
+  color: #BE5D2A;
+}
+
+/* ---- Divider ---- */
+.history-divider {
+  width: 100%;
+  height: 1px;
+  background: #D9D9D9;
+  margin-bottom: 32px;
+}
+
+/* ---- Next page nav ---- */
+.history-next {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 80px;
+}
+
+.history-next-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.history-next-label {
+  color: #1E1E1E;
+  font-size: 13px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.history-next-title {
+  color: #1E1E1E;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.history-next-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 2px solid #F1F5F9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.history-next-btn:hover {
+  border-color: #BE5D2A;
+  background: #FFF5F0;
+}
+
+
+/* ---- Responsive History ---- */
+@media (max-width: 768px) {
+  .history-inner {
+    padding: 0 24px;
+  }
+
+  .history-title {
+    font-size: 24px;
+    padding-top: 48px;
+    padding-bottom: 24px;
+  }
+
+  .history-timeline-bar {
+    width: 120px;
+  }
+
+  .history-banner {
+    height: auto;
+    min-height: 300px;
+    padding-bottom: 40px;
+  }
+
+  .history-banner-inner-wrap {
+    padding: 0 24px;
+  }
+
+  .history-banner-inner {
+    position: relative;
+  }
+
+  .history-timeline-bar {
+    width: 100px;
+  }
+
+  .history-banner-year {
+    font-size: 26px;
+  }
+
+  .history-banner-desc {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .history-body,
+  .history-social {
+    font-size: 15px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-inner {
+    padding: 0 20px;
+  }
+
+  .history-title {
+    font-size: 22px;
+  }
+
+  .history-banner {
+    height: auto;
+    min-height: 280px;
+    padding-bottom: 36px;
+  }
+
+  .history-banner-inner-wrap {
+    padding: 0 20px;
+  }
+
+  .history-banner-inner {
+    position: relative;
+  }
+
+  .history-timeline-bar {
+    width: 80px;
+  }
+
+  .history-banner-year {
+    font-size: 22px;
+  }
+
+  .history-banner-desc {
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  .history-body,
+  .history-social {
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
