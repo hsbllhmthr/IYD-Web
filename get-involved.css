@@ -1,0 +1,361 @@
+/* ==============================================
+   Get Involved Page — Specific Styles
+   ============================================== */
+
+/* ---- Get Involved Hero Banner ---- */
+.gi-hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.gi-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.gi-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+/* Centering wrapper */
+.gi-hero-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.gi-hero-content {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 160px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Breadcrumb */
+.gi-hero-breadcrumb {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+
+/* Judul */
+.gi-hero-title {
+  color: #ffffff;
+  font-size: 38px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.gi-hero-initial {
+  font-family: 'Birthstone Bounce', cursive;
+  font-size: 38px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+/* Deskripsi */
+.gi-hero-desc {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+/* ---- Navbar active state ---- */
+.navbar-menu .nav-active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+.navbar.scrolled .navbar-menu .nav-active {
+  color: #BE5D2A;
+}
+
+
+/* ---- Responsive Get Involved Hero ---- */
+@media (max-width: 768px) {
+  .gi-hero {
+    height: 420px;
+  }
+
+  .gi-hero-content {
+    padding: 0 24px 48px;
+  }
+
+  .gi-hero-title {
+    font-size: 30px;
+  }
+
+  .gi-hero-initial {
+    font-size: 30px;
+  }
+
+  .gi-hero-desc {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gi-hero {
+    height: 380px;
+  }
+
+  .gi-hero-content {
+    padding: 0 20px 40px;
+  }
+
+  .gi-hero-title {
+    font-size: 26px;
+  }
+
+  .gi-hero-initial {
+    font-size: 26px;
+  }
+
+  .gi-hero-desc {
+    font-size: 13px;
+  }
+}
+
+
+/* ==============================================
+   GET INVOLVED CONTENT SECTION
+   ============================================== */
+.gi-content-section {
+  width: 100%;
+  background: #ffffff;
+}
+
+.gi-content-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 88px 160px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.gi-content-desc {
+  color: #1E1E1E;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+/* ---- Chapter Cards Grid ---- */
+.gi-chapters-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gi-chapter-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 20px;
+  background: #ffffff;
+  border: 1px solid #B8B8B8;
+  border-radius: 12px;
+  height: 98px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gi-chapter-card:hover {
+  border-color: #BE5D2A;
+  box-shadow: 0 4px 16px rgba(190, 93, 42, 0.1);
+}
+
+.gi-chapter-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.gi-chapter-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.gi-chapter-org {
+  color: #1E1E1E;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.gi-chapter-name {
+  color: #1E1E1E;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  line-height: 23px;
+}
+
+
+/* ---- Responsive ---- */
+@media (max-width: 1280px) {
+  .gi-chapters-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gi-content-inner {
+    padding: 60px 24px 72px;
+    gap: 24px;
+  }
+
+  .gi-content-desc {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .gi-chapters-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .gi-chapter-card {
+    height: auto;
+    padding: 14px 16px;
+  }
+
+  .gi-chapter-logo {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gi-content-inner {
+    padding: 48px 20px 60px;
+  }
+
+  .gi-content-desc {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .gi-chapters-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .gi-chapter-card {
+    padding: 12px 14px;
+  }
+
+  .gi-chapter-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .gi-chapter-org,
+  .gi-chapter-name {
+    font-size: 13px;
+  }
+}
+
+/* Show More Button (Hidden by default) */
+.gi-show-more-wrap {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  /* Show More Button Wrapper */
+  .gi-show-more-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  .gi-show-more-btn {
+    padding: 10px 24px;
+    background: transparent;
+    border: 1.5px solid #BE5D2A;
+    border-radius: 100px;
+    color: #BE5D2A;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  .gi-show-more-btn:hover {
+    background: #BE5D2A;
+    color: #ffffff;
+  }
+
+  /* Hidden state for chapters */
+  .gi-chapter-card.is-hidden-mobile {
+    display: none !important;
+  }
+}
+
+/* ==============================================
+   WORLD MAP SECTION
+   ============================================== */
+.gi-map-section {
+  width: 100%;
+  background: #fdfdfd;
+  padding: 0;
+  margin-top: 60px;
+}
+
+.gi-map-full-container {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.gi-map-full-container iframe {
+  display: block;
+}
+
+/* Responsive Map */
+@media (max-width: 768px) {
+  .gi-map-section {
+    margin-top: 40px;
+  }
+
+  .gi-map-full-container iframe {
+    height: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gi-map-full-container iframe {
+    height: 350px;
+  }
+}

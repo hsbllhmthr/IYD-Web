@@ -21,7 +21,7 @@
         <a href="about.html" class="nav-active">About Us</a>
         <a href="#">Programs</a>
         <a href="#">Insights</a>
-        <a href="#">Get Involved</a>
+        <a href="get-involved.html">Get Involved</a>
         <a href="#">Contact</a>
       </nav>
 
@@ -40,7 +40,7 @@
       <a href="about.html" onclick="closeMobileMenu()">About Us</a>
       <a href="#" onclick="closeMobileMenu()">Programs</a>
       <a href="#" onclick="closeMobileMenu()">Insights</a>
-      <a href="#" onclick="closeMobileMenu()">Get Involved</a>
+      <a href="get-involved.html" onclick="closeMobileMenu()">Get Involved</a>
       <a href="#" onclick="closeMobileMenu()">Contact</a>
     </nav>
   </div>
@@ -125,8 +125,8 @@
           </div>
 
           <div class="history-banner-content">
-            <h3 class="history-banner-year">2010 - 2011</h3>
-            <p class="history-banner-desc">
+            <h3 class="history-banner-year" id="bannerYear">2010 - 2011</h3>
+            <p class="history-banner-desc" id="bannerDesc">
               In 2010, after the Canada G20 Youth Summit Communique was signed, an idea to form G20 Youth Indonesia was initiated and established by the Indonesian Delegation. These early steps was continued in 2011 when an Indonesian Organizing Committee for G20 Youth Summit was formed. This Organizing Committee was formed to accommodate national requirements to recruit Indonesian youth who would like to participate at the International Diplomatic Engagement Association (IDEA) Network's annual G20 Youth Summit. We are the Indonesian chapter of the IDEA network, a coalition of youth-focused organizations from G20 member countries.
             </p>
           </div>
@@ -308,10 +308,30 @@
     document.querySelectorAll('[data-anim]').forEach(el => animObserver.observe(el));
 
     /* ---- Timeline Nav ---- */
+    const bannerYear = document.getElementById('bannerYear');
+    const bannerDesc = document.getElementById('bannerDesc');
+
+    const timelineContent = {
+      '2010': {
+        year: '2010 - 2011',
+        desc: 'In 2010, after the Canada G20 Youth Summit Communique was signed, an idea to form G20 Youth Indonesia was initiated and established by the Indonesian Delegation. These early steps was continued in 2011 when an Indonesian Organizing Committee for G20 Youth Summit was formed. This Organizing Committee was formed to accommodate national requirements to recruit Indonesian youth who would like to participate at the International Diplomatic Engagement Association (IDEA) Network\'s annual G20 Youth Summit. We are the Indonesian chapter of the IDEA network, a coalition of youth-focused organizations from G20 member countries.'
+      },
+      '2013': {
+        year: '2013 - Present',
+        desc: 'In 2013, realizing the importance to engage Indonesian youth beyond the G20, the organization was revamped to Indonesian Youth Diplomacy (IYD), co-founded by various Indonesian delegation G20 Youth Summit alumni. Our flagship program is the annual Y20 Summit, where we send the best and brightest Indonesian youth leaders to represent Indonesia in the international forum along with our partners from the IDEA network. We also partner with the Indonesian government, embassies in Indonesia, and local youth organizations in a mission to spread awareness on diplomacy.'
+      }
+    };
+
     document.querySelectorAll('.history-timeline-item').forEach(item => {
       item.addEventListener('click', () => {
         document.querySelectorAll('.history-timeline-item').forEach(i => i.classList.remove('active'));
         item.classList.add('active');
+
+        const key = item.dataset.year;
+        if (timelineContent[key]) {
+          bannerYear.textContent = timelineContent[key].year;
+          bannerDesc.textContent = timelineContent[key].desc;
+        }
       });
     });
 

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Involved — IYD LC Sulawesi Selatan</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="get-involved.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Birthstone+Bounce&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <img class="navbar-logo logo-light" src="/img/logo.png" alt="IYD Logo Light" />
+      <img class="navbar-logo logo-dark" src="/img/logo-red.png" alt="IYD Logo Dark" />
+
+      <nav class="navbar-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="#">Programs</a>
+        <a href="#">Insights</a>
+        <a href="get-involved.html" class="nav-active">Get Involved</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu-nav">
+      <a href="index.html" onclick="closeMobileMenu()">Home</a>
+      <a href="about.html" onclick="closeMobileMenu()">About Us</a>
+      <a href="#" onclick="closeMobileMenu()">Programs</a>
+      <a href="#" onclick="closeMobileMenu()">Insights</a>
+      <a href="get-involved.html" onclick="closeMobileMenu()">Get Involved</a>
+      <a href="#" onclick="closeMobileMenu()">Contact</a>
+    </nav>
+  </div>
+
+  <!-- ====== GET INVOLVED HERO BANNER ====== -->
+  <section class="gi-hero">
+    <img src="/img/bg-involved.png" alt="Get Involved Background" class="gi-hero-bg" />
+    <div class="gi-hero-overlay"></div>
+
+    <div class="gi-hero-inner">
+      <div class="gi-hero-content">
+        <p class="gi-hero-breadcrumb">Home / Get Involved</p>
+        <h1 class="gi-hero-title">
+          <span class="gi-hero-initial">G</span>et Involved
+        </h1>
+        <p class="gi-hero-desc">
+          IYD has been growing since 2013<br />
+          from Jakarta to 13 provinces across Indonesia<br />
+          with a total more than 2000 youths engagement.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== GET INVOLVED CONTENT ====== -->
+  <section class="gi-content-section">
+    <div class="gi-content-inner">
+
+      <p class="gi-content-desc" data-anim>
+        Indonesian Youth Diplomacy (IYD) has expanded from Jakarta to various regions across Indonesia, with a primary focus on establishing
+        Local Chapters (LC) in several provinces to empower youth in international diplomacy. Based on the update as of August 2023, IYD introduced
+        8 new Local Chapters, extending its reach to the following provinces:
+      </p>
+
+      <!-- Grid kartu chapter -->
+      <div class="gi-chapters-grid">
+
+        <div class="gi-chapter-card">
+          <img src="/img/lc/jakarta.png" alt="IYD DKI Jakarta" class="gi-chapter-logo" />
+          <div class="gi-chapter-info">
+            <span class="gi-chapter-org">Indonesia Youth Diplomacy</span>
+            <span class="gi-chapter-name">DKI Jakarta (Pusat)</span>
+          </div>
+        </div>
+
+        <div class="gi-chapter-card">
+          <img src="/img/lc/sulawesi-selatan.png" alt="IYD LC Sulawesi Selatan" class="gi-chapter-logo" />
+          <div class="gi-chapter-info">
+            <span class="gi-chapter-org">Indonesia Youth Diplomacy</span>
+            <span class="gi-chapter-name">LC Sulawesi Selatan</span>
+          </div>
+        </div>
+
+        <div class="gi-chapter-card">
+          <img src="/img/lc/sulawesi-utara.png" alt="IYD LC Sulawesi Utara" class="gi-chapter-logo" />
+          <div class="gi-chapter-info">
+            <span class="gi-chapter-org">Indonesia Youth Diplomacy</span>
+            <span class="gi-chapter-name">LC Sulawesi Utara</span>
+          </div>
+        </div>
+
+        <div class="gi-chapter-card">
+          <img src="/img/lc/sumatera-barat.png" alt="IYD LC Sumatera Barat" class="gi-chapter-logo" />
+          <div class="gi-chapter-info">
+            <span class="gi-chapter-org">Indonesia Youth Diplomacy</span>
+            <span class="gi-chapter-name">LC Sumatera Barat</span>
+          </div>
+        </div>
+
+        <div class="gi-chapter-card">
+          <img src="/img/lc/sumatera-utara.png" alt="IYD LC Sumatera Utara" class="gi-chapter-logo" />
+          <div class="gi-chapter-info">
+            <span class="gi-chapter-org">Indonesia Youth Diplomacy</span>
+            <span class="gi-chapter-name">LC Sumatera Utara</span>
+          </div>
+        </div>
+
+        <div class="gi-chapter-card">
+          <img src="/img/lc/kalimantan-selatan.png" alt="IYD LC Kalimantan Selatan" class="gi-chapter-logo" />
+          <div class="gi-chapter-info">
+            <span class="gi-chapter-org">Indonesia Youth Diplomacy</span>
+            <span class="gi-chapter-name">LC Kalimantan Selatan</span>
+          </div>
+        </div>
+
+        <div class="gi-chapter-card">
+          <img src="/img/lc/jawa-timur.png" alt="IYD LC Jawa Timur" class="gi-chapter-logo" />
+          <div class="gi-chapter-info">
+            <span class="gi-chapter-org">Indonesia Youth Diplomacy</span>
+            <span class="gi-chapter-name">LC Jawa Timur</span>
+          </div>
+        </div>
+
+        <div class="gi-chapter-card">
+          <img src="/img/lc/bali.png" alt="IYD LC Bali" class="gi-chapter-logo" />
+          <div class="gi-chapter-info">
+            <span class="gi-chapter-org">Indonesia Youth Diplomacy</span>
+            <span class="gi-chapter-name">LC Bali</span>
+          </div>
+        </div>
+
+        <div class="gi-chapter-card">
+          <img src="/img/lc/maluku.png" alt="IYD LC Maluku" class="gi-chapter-logo" />
+          <div class="gi-chapter-info">
+            <span class="gi-chapter-org">Indonesia Youth Diplomacy</span>
+            <span class="gi-chapter-name">LC Maluku</span>
+          </div>
+        </div>
+
+        <div class="gi-chapter-card">
+          <img src="/img/lc/kalimantan-timur.png" alt="IYD LC Kalimantan Timur" class="gi-chapter-logo" />
+          <div class="gi-chapter-info">
+            <span class="gi-chapter-org">Indonesia Youth Diplomacy</span>
+            <span class="gi-chapter-name">LC Kalimantan Timur</span>
+          </div>
+        </div>
+
+        <div class="gi-chapter-card">
+          <img src="/img/lc/sumatera-selatan.png" alt="IYD LC Sumatera Selatan" class="gi-chapter-logo" />
+          <div class="gi-chapter-info">
+            <span class="gi-chapter-org">Indonesia Youth Diplomacy</span>
+            <span class="gi-chapter-name">LC Sumatera Selatan</span>
+          </div>
+        </div>
+
+        <div class="gi-chapter-card">
+          <img src="/img/lc/banten.png" alt="IYD LC Banten" class="gi-chapter-logo" />
+          <div class="gi-chapter-info">
+            <span class="gi-chapter-org">Indonesia Youth Diplomacy</span>
+            <span class="gi-chapter-name">LC Banten</span>
+          </div>
+        </div>
+
+        <div class="gi-chapter-card">
+          <img src="/img/lc/yogyakarta.png" alt="IYD LC DIY Yogyakarta" class="gi-chapter-logo" />
+          <div class="gi-chapter-info">
+            <span class="gi-chapter-org">Indonesia Youth Diplomacy</span>
+            <span class="gi-chapter-name">LC DIY Yogyakarta</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Show More Button (Mobile only) -->
+      <div class="gi-show-more-wrap">
+        <button id="showMoreChaptersBtn" class="gi-show-more-btn">See More Chapters</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== WORLD MAP SECTION ====== -->
+  <section class="gi-map-section">
+    <div class="gi-map-full-container" data-anim>
+      <div id="map" style="width: 100%; height: 600px; z-index: 1;"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <div class="footer-top">
+
+        <div class="footer-brand" data-anim>
+          <img src="/img/logo-footer.png" alt="IYD Logo" class="footer-logo" />
+        </div>
+
+        <div class="footer-cols-row">
+
+          <div class="footer-col" data-anim>
+            <h4 class="footer-col-title">About IYD</h4>
+            <ul class="footer-col-list">
+              <li><a href="#">Join IYD Community</a></li>
+              <li><a href="#">Media Coverage</a></li>
+              <li><a href="#">Publications</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">IYD Board</a></li>
+              <li><a href="#">Partners</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col" data-anim>
+            <h4 class="footer-col-title">Programs IYD</h4>
+            <ul class="footer-col-list">
+              <li><a href="#">Meet the Diplomats</a></li>
+              <li><a href="#">Workshops Series</a></li>
+              <li><a href="#">IYD Goes To Campus</a></li>
+              <li><a href="#">IYD For GYP2015</a></li>
+              <li><a href="#">Group of 20 (G20)</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="footer-col" data-anim>
+          <h4 class="footer-col-title">Documents</h4>
+          <ul class="footer-col-list">
+            <li><a href="#">Past Declarations & Communications</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Slides</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy" data-anim>@Copyright IYD Local Chapter Sulawesi Selatan (IYD LC SULSEL) 2026. All Right Reserved.</p>
+        <div class="footer-socials" data-anim>
+          <a href="#" class="footer-social-link" aria-label="Social 1">
+            <img src="/img/x.png" alt="Social 1" />
+          </a>
+          <a href="#" class="footer-social-link" aria-label="Social 2">
+            <img src="/img/tiktok.png" alt="Social 2" />
+          </a>
+          <a href="#" class="footer-social-link" aria-label="Social 3">
+            <img src="/img/ig.png" alt="Social 3" />
+          </a>
+          <a href="#" class="footer-social-link" aria-label="Social 4">
+            <img src="/img/ytb.png" alt="Social 4" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ====== BACK TO TOP BUTTON ====== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script>
+    const navbar       = document.getElementById('navbar');
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu   = document.getElementById('mobileMenu');
+    const backToTopBtn = document.getElementById('backToTop');
+
+    /* ---- Show More Chapters Logic ---- */
+    const showMoreBtn = document.getElementById('showMoreChaptersBtn');
+    const chapterCards = document.querySelectorAll('.gi-chapter-card');
+    
+    function initChapters() {
+      // Sembunyikan chapter > 5 hanya di layar mobile (<= 480px)
+      if (window.innerWidth <= 480) {
+        chapterCards.forEach((card, index) => {
+          if (index >= 5) {
+            card.classList.add('is-hidden-mobile');
+          }
+        });
+      } else {
+        chapterCards.forEach(card => card.classList.remove('is-hidden-mobile'));
+      }
+    }
+
+    if (showMoreBtn) {
+      showMoreBtn.addEventListener('click', () => {
+        chapterCards.forEach(card => card.classList.remove('is-hidden-mobile'));
+        showMoreBtn.parentElement.style.display = 'none';
+      });
+    }
+
+    window.addEventListener('resize', initChapters);
+    initChapters();
+
+    /* ---- Navbar scroll ---- */
+    let lastScrollY = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > 10) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+
+      if (currentScrollY > lastScrollY + 5 && currentScrollY > 80) {
+        navbar.classList.add('hidden');
+      } else if (currentScrollY < lastScrollY - 5) {
+        navbar.classList.remove('hidden');
+      }
+
+      lastScrollY = currentScrollY;
+
+      if (currentScrollY > 400) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    /* ---- Hamburger ---- */
+    hamburgerBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburgerBtn.classList.toggle('active', isOpen);
+      document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      hamburgerBtn.classList.remove('active');
+      document.body.classList.remove('menu-open');
+    }
+
+    /* ---- Back to Top ---- */
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* ---- Scroll Animations ---- */
+    const animObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const siblings = entry.target.parentElement.querySelectorAll('[data-anim]');
+          let delay = 0;
+          siblings.forEach((el, idx) => { if (el === entry.target) delay = idx * 80; });
+          setTimeout(() => entry.target.classList.add('anim-visible'), delay);
+          animObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+    document.querySelectorAll('[data-anim]').forEach(el => animObserver.observe(el));
+  </script>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    /* ---- Map Implementation ---- */
+    const map = L.map('map', {
+      scrollWheelZoom: false,
+      zoomControl: true
+    }).setView([-2.5, 118], 5);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    const locations = [
+      { name: "DKI Jakarta (Pusat)", coords: [-6.2088, 106.8456] },
+      { name: "LC Sulawesi Selatan", coords: [-5.1476, 119.4327] },
+      { name: "LC Sulawesi Utara", coords: [1.4748, 124.8404] },
+      { name: "LC Sumatera Barat", coords: [-0.9471, 100.4172] },
+      { name: "LC Sumatera Utara", coords: [3.5952, 98.6722] },
+      { name: "LC Kalimantan Selatan", coords: [-3.3167, 114.5901] },
+      { name: "LC Jawa Timur", coords: [-7.2575, 112.7521] },
+      { name: "LC Bali", coords: [-8.6705, 115.2126] },
+      { name: "LC Maluku", coords: [-3.6554, 128.1906] },
+      { name: "LC Kalimantan Timur", coords: [-0.4949, 117.1492] },
+      { name: "LC Sumatera Selatan", coords: [-2.9761, 104.7754] },
+      { name: "LC Banten", coords: [-6.1105, 106.1625] },
+      { name: "LC DIY Yogyakarta", coords: [-7.7956, 110.3695] }
+    ];
+
+    locations.forEach(loc => {
+      L.marker(loc.coords).addTo(map)
+        .bindPopup(`<b>IYD ${loc.name}</b>`);
+    });
+  </script>
+
+</body>
+</html>
