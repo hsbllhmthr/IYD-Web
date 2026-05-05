@@ -120,6 +120,10 @@
     font-size: 14px;
     line-height: 24px;
   }
+
+  .br-desktop {
+    display: none !important;
+  }
 }
 
 @media (max-width: 480px) {

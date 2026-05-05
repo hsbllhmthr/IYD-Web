@@ -22,7 +22,7 @@
         <a href="#">Programs</a>
         <a href="#">Insights</a>
         <a href="get-involved.html">Get Involved</a>
-        <a href="#">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
 
       <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
@@ -41,7 +41,7 @@
       <a href="#" onclick="closeMobileMenu()">Programs</a>
       <a href="#" onclick="closeMobileMenu()">Insights</a>
       <a href="get-involved.html" onclick="closeMobileMenu()">Get Involved</a>
-      <a href="#" onclick="closeMobileMenu()">Contact</a>
+      <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
     </nav>
   </div>
 
@@ -57,9 +57,7 @@
           <span class="about-hero-initial">A</span>bout Us
         </h1>
         <p class="about-hero-desc">
-          Explore our history, the vision and mission that underpin<br />
-          our Community, our logo philosophy, and the community<br />
-          structure that supports our youth leadership.
+          Explore our history, the vision and mission that underpin<br class="br-desktop" /> our Community, our logo philosophy, and the community<br class="br-desktop" /> structure that supports our youth leadership.
         </p>
       </div>
     </div>
@@ -76,7 +74,7 @@
   </div>
 
   <!-- ====== ABOUT DETAIL SECTION ====== -->
-  <section class="adetail-section">
+  <section class="adetail-section" id="about-iyd">
     <div class="adetail-inner">
 
       <h2 class="adetail-title" data-anim>Indonesian Youth Diplomacy</h2>
@@ -97,7 +95,7 @@
   </section>
 
   <!-- ====== IYD HISTORY SECTION ====== -->
-  <section class="history-section">
+  <section class="history-section" id="iyd-history">
     <div class="history-inner">
 
       <h2 class="history-title" data-anim>Indonesian Youth Diplomacy History</h2>
@@ -340,6 +338,19 @@
       tab.addEventListener('click', () => {
         document.querySelectorAll('.about-tab').forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
+
+        const targetId = tab.dataset.tab; // 'about-iyd' or 'iyd-history'
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          const navbarHeight = navbar.offsetHeight || 70;
+          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
       });
     });
   </script>

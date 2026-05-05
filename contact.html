@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — IYD LC Sulawesi Selatan</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="contact.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Birthstone+Bounce&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="navbar-inner">
+      <img class="navbar-logo logo-light" src="/img/logo.png" alt="IYD Logo Light" />
+      <img class="navbar-logo logo-dark" src="/img/logo-red.png" alt="IYD Logo Dark" />
+
+      <nav class="navbar-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="#">Programs</a>
+        <a href="#">Insights</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="contact.html" class="nav-active">Contact</a>
+      </nav>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu-nav">
+      <a href="index.html" onclick="closeMobileMenu()">Home</a>
+      <a href="about.html" onclick="closeMobileMenu()">About Us</a>
+      <a href="#" onclick="closeMobileMenu()">Programs</a>
+      <a href="#" onclick="closeMobileMenu()">Insights</a>
+      <a href="get-involved.html" onclick="closeMobileMenu()">Get Involved</a>
+      <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+    </nav>
+  </div>
+
+  <!-- ====== CONTACT HERO ====== -->
+  <section class="contact-hero">
+    <div class="contact-hero-content">
+      <p class="contact-hero-label" data-anim>Get Started</p>
+      <h1 class="contact-hero-title" data-anim>
+        Get in touch with us.<br />
+        We’re here to assists you.
+      </h1>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT FORM SECTION ====== -->
+  <section class="contact-section">
+    <div class="contact-inner">
+      
+      <form action="#" class="contact-form">
+        
+        <div class="contact-form-row">
+          <!-- Name -->
+          <div class="contact-form-group" data-anim>
+            <label for="name" class="contact-form-label">Your Name</label>
+            <input type="text" id="name" class="contact-form-input" placeholder="Enter your full name" required />
+          </div>
+          
+          <!-- Email -->
+          <div class="contact-form-group" data-anim>
+            <label for="email" class="contact-form-label">Your Email Address</label>
+            <input type="email" id="email" class="contact-form-input" placeholder="example@mail.com" required />
+          </div>
+          
+          <!-- Phone -->
+          <div class="contact-form-group" data-anim>
+            <label for="phone" class="contact-form-label">Phone Number (Optional)</label>
+            <input type="tel" id="phone" class="contact-form-input" placeholder="+62..." />
+          </div>
+        </div>
+
+        <!-- Message -->
+        <div class="contact-form-group full-width" data-anim>
+          <label for="message" class="contact-form-label">Message</label>
+          <textarea id="message" class="contact-form-textarea" placeholder="How can we help you?" required></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div data-anim>
+          <button type="submit" class="contact-submit-btn">
+            Leave a Message
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ====== CTA SECTION ====== -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="cta-text" data-anim>
+        <span class="cta-text-light">Be A Part of the Growing<br /></span>
+        <span class="cta-text-bold">IYD LC Sulawesi Selatan<br />Community!</span>
+      </div>
+      <a href="#" class="cta-btn" data-anim>Join Now</a>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <div class="footer-top">
+
+        <div class="footer-brand" data-anim>
+          <img src="/img/logo-footer.png" alt="IYD Logo" class="footer-logo" />
+        </div>
+
+        <div class="footer-cols-row">
+
+          <div class="footer-col" data-anim>
+            <h4 class="footer-col-title">About IYD</h4>
+            <ul class="footer-col-list">
+              <li><a href="#">Join IYD Community</a></li>
+              <li><a href="#">Media Coverage</a></li>
+              <li><a href="#">Publications</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">IYD Board</a></li>
+              <li><a href="#">Partners</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col" data-anim>
+            <h4 class="footer-col-title">Programs IYD</h4>
+            <ul class="footer-col-list">
+              <li><a href="#">Meet the Diplomats</a></li>
+              <li><a href="#">Workshops Series</a></li>
+              <li><a href="#">IYD Goes To Campus</a></li>
+              <li><a href="#">IYD For GYP2015</a></li>
+              <li><a href="#">Group of 20 (G20)</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="footer-col" data-anim>
+          <h4 class="footer-col-title">Documents</h4>
+          <ul class="footer-col-list">
+            <li><a href="#">Past Declarations & Communications</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Slides</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy" data-anim>@Copyright IYD Local Chapter Sulawesi Selatan (IYD LC SULSEL) 2026. All Right Reserved.</p>
+        <div class="footer-socials" data-anim>
+          <a href="#" class="footer-social-link" aria-label="Social 1">
+            <img src="/img/x.png" alt="Social 1" />
+          </a>
+          <a href="#" class="footer-social-link" aria-label="Social 2">
+            <img src="/img/tiktok.png" alt="Social 2" />
+          </a>
+          <a href="#" class="footer-social-link" aria-label="Social 3">
+            <img src="/img/ig.png" alt="Social 3" />
+          </a>
+          <a href="#" class="footer-social-link" aria-label="Social 4">
+            <img src="/img/ytb.png" alt="Social 4" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ====== BACK TO TOP BUTTON ====== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script>
+    const navbar       = document.getElementById('navbar');
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu   = document.getElementById('mobileMenu');
+    const backToTopBtn = document.getElementById('backToTop');
+
+    /* ---- Navbar scroll ---- */
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > 400) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    /* ---- Hamburger ---- */
+    hamburgerBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburgerBtn.classList.toggle('active', isOpen);
+      document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      hamburgerBtn.classList.remove('active');
+      document.body.classList.remove('menu-open');
+    }
+
+    /* ---- Back to Top ---- */
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* ---- Scroll Animations ---- */
+    const animObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const siblings = entry.target.parentElement.querySelectorAll('[data-anim]');
+          let delay = 0;
+          siblings.forEach((el, idx) => { if (el === entry.target) delay = idx * 80; });
+          setTimeout(() => entry.target.classList.add('anim-visible'), delay);
+          animObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+    document.querySelectorAll('[data-anim]').forEach(el => animObserver.observe(el));
+  </script>
+
+</body>
+</html>
