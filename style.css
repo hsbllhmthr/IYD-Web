@@ -1059,15 +1059,64 @@ body.menu-open {
 .programs-section {
   position: relative;
   width: 100%;
+  background: #ffffff;
+  overflow: hidden; /* Menyembunyikan kartu yang di luar layar */
+}
+
+.programs-track {
   display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
 }
 
 /* ---- Kartu individual ---- */
 .programs-card {
   position: relative;
-  flex: 1;
+  flex: 0 0 25%; /* Tampilkan 4 kartu di desktop */
   height: 564px;
   overflow: hidden;
+}
+
+/* Navigasi Slider */
+.programs-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  transition: all 0.3s ease;
+  opacity: 0; /* Sembunyi secara default */
+  visibility: hidden;
+}
+
+.programs-section:hover .programs-nav-btn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.programs-nav-btn:hover {
+  background: #BE5D2A;
+}
+
+.programs-nav-btn:hover svg {
+  stroke: #ffffff;
+}
+
+.programs-nav-btn.prev { left: 24px; }
+.programs-nav-btn.next { right: 24px; }
+
+.programs-nav-btn svg {
+  transition: stroke 0.3s ease;
 }
 
 .programs-card-img {
@@ -1088,7 +1137,13 @@ body.menu-open {
 .programs-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.75) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.85) 100%);
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.programs-card:hover .programs-card-overlay {
+  background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.95) 100%);
 }
 
 /* Teks di bawah kartu */
@@ -1116,21 +1171,34 @@ body.menu-open {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 
 /* ---- Responsive Programs ---- */
-@media (max-width: 768px) {
-  .programs-section {
-    flex-direction: column;
-    width: 100%;
-  }
-
+@media (max-width: 1024px) {
   .programs-card {
-    flex: none;
-    width: 100%;
-    height: 280px;
+    flex: 0 0 50%; /* Tampilkan 2 kartu di tablet */
   }
+}
+
+@media (max-width: 768px) {
+  .programs-card {
+    flex: 0 0 100%; /* Tampilkan 1 kartu di mobile */
+    height: 480px;
+  }
+  
+  .programs-nav-btn {
+    opacity: 1;
+    visibility: visible;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .programs-nav-btn.prev { left: 12px; }
+  .programs-nav-btn.next { right: 12px; }
 
   .programs-card-content {
     bottom: 24px;
@@ -1144,7 +1212,7 @@ body.menu-open {
 
 @media (max-width: 480px) {
   .programs-card {
-    height: 240px;
+    height: 400px;
   }
 
   .programs-card-content {

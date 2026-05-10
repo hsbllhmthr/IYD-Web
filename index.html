@@ -221,41 +221,78 @@
   </section>
 
   <!-- ====== PROGRAMS SECTION ====== -->
-  <section class="programs-section">
+  <section class="programs-section" id="programsSlider">
+    
+    <!-- Slider Navigation -->
+    <button class="programs-nav-btn prev" id="progPrev" aria-label="Previous Program">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="programs-nav-btn next" id="progNext" aria-label="Next Program">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
 
-    <div class="programs-card">
-      <img src="/img/prog1.png" alt="AUS Consult" class="programs-card-img" />
-      <div class="programs-card-overlay"></div>
-      <div class="programs-card-content" data-anim>
-        <span class="programs-card-tag">IYD LC Sulsel Activity Programs</span>
-        <h3 class="programs-card-title">AUS Consult</h3>
+    <div class="programs-track" id="progTrack">
+      <div class="programs-card">
+        <img src="/img/prog1.png" alt="AUS Consult" class="programs-card-img" />
+        <div class="programs-card-overlay"></div>
+        <div class="programs-card-content" data-anim>
+          <span class="programs-card-tag">IYD LC South Sulawesi Programs & Initiatives</span>
+          <h3 class="programs-card-title">AUS Consult</h3>
+        </div>
       </div>
-    </div>
 
-    <div class="programs-card">
-      <img src="/img/prog2.png" alt="Dialog Diplomat" class="programs-card-img" />
-      <div class="programs-card-overlay"></div>
-      <div class="programs-card-content" data-anim>
-        <span class="programs-card-tag">IYD LC Sulsel Activity Programs</span>
-        <h3 class="programs-card-title">Dialog Diplomat</h3>
+      <div class="programs-card">
+        <img src="/img/prog2.png" alt="Dialog Diplomat" class="programs-card-img" />
+        <div class="programs-card-overlay"></div>
+        <div class="programs-card-content" data-anim>
+          <span class="programs-card-tag">IYD LC South Sulawesi Programs & Initiatives</span>
+          <h3 class="programs-card-title">Dialog Diplomat</h3>
+        </div>
       </div>
-    </div>
 
-    <div class="programs-card">
-      <img src="/img/prog3.png" alt="International Workshop" class="programs-card-img" />
-      <div class="programs-card-overlay"></div>
-      <div class="programs-card-content" data-anim>
-        <span class="programs-card-tag">IYD LC Sulsel Activity Programs</span>
-        <h3 class="programs-card-title">International Workshop</h3>
+      <div class="programs-card">
+        <img src="/img/prog3.png" alt="International Workshop" class="programs-card-img" />
+        <div class="programs-card-overlay"></div>
+        <div class="programs-card-content" data-anim>
+          <span class="programs-card-tag">IYD LC South Sulawesi Programs & Initiatives</span>
+          <h3 class="programs-card-title">International Workshop</h3>
+        </div>
       </div>
-    </div>
 
-    <div class="programs-card">
-      <img src="/img/prog4.png" alt="Dinner With Aus" class="programs-card-img" />
-      <div class="programs-card-overlay"></div>
-      <div class="programs-card-content" data-anim>
-        <span class="programs-card-tag">IYD LC Sulsel Activity Programs</span>
-        <h3 class="programs-card-title">Dinner With Aus</h3>
+      <div class="programs-card">
+        <img src="/img/prog4.png" alt="Dinner With Aus" class="programs-card-img" />
+        <div class="programs-card-overlay"></div>
+        <div class="programs-card-content" data-anim>
+          <span class="programs-card-tag">IYD LC South Sulawesi Programs & Initiatives</span>
+          <h3 class="programs-card-title">Dinner With Aus</h3>
+        </div>
+      </div>
+
+      <div class="programs-card">
+        <img src="/img/prog5.png" alt="Dinner With Aus" class="programs-card-img" />
+        <div class="programs-card-overlay"></div>
+        <div class="programs-card-content" data-anim>
+          <span class="programs-card-tag">IYD LC South Sulawesi Programs & Initiatives</span>
+          <h3 class="programs-card-title">Future Leader Fest</h3>
+        </div>
+      </div>
+
+      <div class="programs-card">
+        <img src="/img/prog6.png" alt="Dinner With Aus" class="programs-card-img" />
+        <div class="programs-card-overlay"></div>
+        <div class="programs-card-content" data-anim>
+          <span class="programs-card-tag">IYD LC South Sulawesi Programs & Initiatives</span>
+          <h3 class="programs-card-title">Rain Forest Youth Summit</h3>
+        </div>
+      </div>
+
+      <div class="programs-card">
+        <img src="/img/prog7.png" alt="Dinner With Aus" class="programs-card-img" />
+        <div class="programs-card-overlay"></div>
+        <div class="programs-card-content" data-anim>
+          <span class="programs-card-tag">IYD LC South Sulawesi Programs & Initiatives</span>
+          <h3 class="programs-card-title">Joint Audience with Japan Consulate in Makassar</h3>
+        </div>
       </div>
     </div>
 
@@ -350,15 +387,15 @@
 
         <!-- Gambar besar kiri -->
         <div class="gallery-main" data-anim>
-          <img src="/img/gal1.png" alt="Gallery Main" class="gallery-img" />
+          <img src="/img/gal1.jpg" alt="Gallery Main" class="gallery-img" />
         </div>
 
         <!-- 2x2 grid kanan -->
         <div class="gallery-sub" data-anim>
-          <img src="/img/gal2.png" alt="Gallery 2" class="gallery-img" />
-          <img src="/img/gal3.png" alt="Gallery 3" class="gallery-img" />
-          <img src="/img/gal4.png" alt="Gallery 4" class="gallery-img" />
-          <img src="/img/gal5.png" alt="Gallery 5" class="gallery-img" />
+          <img src="/img/gal2.jpg" alt="Gallery 2" class="gallery-img" />
+          <img src="/img/gal3.jpg" alt="Gallery 3" class="gallery-img" />
+          <img src="/img/gal4.jpg" alt="Gallery 4" class="gallery-img" />
+          <img src="/img/gal5.jpg" alt="Gallery 5" class="gallery-img" />
         </div>
 
       </div>
@@ -374,7 +411,7 @@
         <span class="cta-text-light">Be A Part of the Growing<br /></span>
         <span class="cta-text-bold">IYD LC Sulawesi Selatan<br />Community!</span>
       </div>
-      <a href="#" class="cta-btn" data-anim>Join Now</a>
+      <a href="https://chat.whatsapp.com/K2bBqpmbX7I8IMFVeCKsI0?mode=gi_t" class="cta-btn" data-anim>Join Now</a>
     </div>
   </section>
 
@@ -399,7 +436,7 @@
         <div class="footer-col" data-anim>
           <h4 class="footer-col-title">About IYD</h4>
           <ul class="footer-col-list">
-            <li><a href="#">Join IYD Community</a></li>
+            <li><a href="https://chat.whatsapp.com/K2bBqpmbX7I8IMFVeCKsI0?mode=gi_t">Join IYD Community</a></li>
             <li><a href="#">Media Coverage</a></li>
             <li><a href="#">Publications</a></li>
             <li><a href="#">Contact Us</a></li>
@@ -591,6 +628,98 @@
     backToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    /* ---- Gallery Slider Logic ---- */
+    const galleryImages = [
+      '/img/gal1.jpg',
+      '/img/gal2.jpg',
+      '/img/gal3.jpg',
+      '/img/gal4.jpg',
+      '/img/gal5.jpg',
+      '/img/gal6.jpg',
+      '/img/gal7.jpg',
+      '/img/gal8.jpg',
+      '/img/gal9.jpg',
+      '/img/gal10.jpg',
+    ];
+
+    let currentStartIdx = 0;
+    const mainGalleryImg = document.querySelector('.gallery-main .gallery-img');
+    const subGalleryImgs = document.querySelectorAll('.gallery-sub .gallery-img');
+    const galleryPrevBtn = document.getElementById('galleryPrev');
+    const galleryNextBtn = document.getElementById('galleryNext');
+
+    function updateGallery() {
+      // Main image
+      mainGalleryImg.style.opacity = '0';
+      
+      setTimeout(() => {
+        mainGalleryImg.src = galleryImages[currentStartIdx];
+        mainGalleryImg.style.opacity = '1';
+        
+        // Sub images
+        subGalleryImgs.forEach((img, idx) => {
+          const nextIdx = (currentStartIdx + idx + 1) % galleryImages.length;
+          img.src = galleryImages[nextIdx];
+        });
+      }, 200);
+    }
+
+    galleryNextBtn.addEventListener('click', () => {
+      currentStartIdx = (currentStartIdx + 1) % galleryImages.length;
+      updateGallery();
+    });
+
+    galleryPrevBtn.addEventListener('click', () => {
+      currentStartIdx = (currentStartIdx - 1 + galleryImages.length) % galleryImages.length;
+      updateGallery();
+    });
+
+    /* ---- Programs Slider Logic ---- */
+    const progTrack = document.getElementById('progTrack');
+    const progPrev  = document.getElementById('progPrev');
+    const progNext  = document.getElementById('progNext');
+    const progCards = document.querySelectorAll('.programs-card');
+    
+    let currentProgIdx = 0;
+
+    function getVisibleCards() {
+      if (window.innerWidth <= 768) return 1;
+      if (window.innerWidth <= 1024) return 2;
+      return 4;
+    }
+
+    function updateProgSlider() {
+      const visibleCards = getVisibleCards();
+      const maxIdx = Math.max(0, progCards.length - visibleCards);
+      
+      if (currentProgIdx > maxIdx) currentProgIdx = maxIdx;
+      
+      const cardWidth = 100 / visibleCards;
+      progTrack.style.transform = `translateX(-${currentProgIdx * cardWidth}%)`;
+      
+      // Update button visibility if needed
+      progPrev.style.display = currentProgIdx === 0 ? 'none' : 'flex';
+      progNext.style.display = currentProgIdx === maxIdx ? 'none' : 'flex';
+    }
+
+    progNext.addEventListener('click', () => {
+      const visibleCards = getVisibleCards();
+      if (currentProgIdx < progCards.length - visibleCards) {
+        currentProgIdx++;
+        updateProgSlider();
+      }
+    });
+
+    progPrev.addEventListener('click', () => {
+      if (currentProgIdx > 0) {
+        currentProgIdx--;
+        updateProgSlider();
+      }
+    });
+
+    window.addEventListener('resize', updateProgSlider);
+    updateProgSlider(); // Initial call
   </script>
 
 </body>
